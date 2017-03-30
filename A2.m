@@ -1,7 +1,3 @@
 function [ Irec ] = A2( Is )
-    N = length(Is);
-    Irec = Is{1};
-    for i = 2:N
-        Irec = max(Irec, Is{i});
-    end
+    Irec = reshape(max(Is,[],2)-min(Is,[],2),1920,1280,3);
 end
